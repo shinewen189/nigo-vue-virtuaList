@@ -45,9 +45,8 @@
                     this.startIndex = this.startIndex + this.count
                     this.endIndex = this.startIndex + this.count
                     this.loadData(this.startIndex, this.endIndex)
-                    if (this.endIndex >= this.virtualList.length) {
-                        this.observer.unobserve(entries[0].target)
-                    }
+
+
                 }
 
             }, {threshold: [0, 1]})
@@ -58,7 +57,14 @@
                 this.$nextTick().then(() => {
                     const li = this.$el.getElementsByTagName('li')[this.virtualList.length - 1]
                     this.count = Math.ceil(this.listHeight ? this.listHeight / li.offsetHeight : innerHeight / li.offsetHeight)
-                    this.observer.observe(li)
+                    console.log(this.endIndex >= this.list.length);
+                    if (this.endIndex >= this.list.length) {
+                        this.observer.unobserve(li)
+                        this.observer.disconnect()
+                    }else {
+                        this.observer.observe(li)
+
+                    }
                 })
             }
         }

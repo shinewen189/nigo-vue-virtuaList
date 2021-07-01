@@ -1,5 +1,5 @@
 
-## nigo-vue-virtual-list v1.0.0
+## nigo-vue-virtual-list v1.0.3
 `    npm install nigo-vue-virtual-list
 `
 `    yarn add nigo-vue-virtual-list

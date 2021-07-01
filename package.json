@@ -1,6 +1,6 @@
 {
   "name": "nigo-vue-virtual-list",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "vue长列表组件",
   "author": "nigo",
   "main": "./dist/nigo-vue-virtual-list.js",

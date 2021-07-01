@@ -1,11 +1,3 @@
-import virtuaList from "./components/virtuaList"
-
-export default {
-    install(Vue) {
-        Vue.component('tab', virtuaList)
-    },
-}
-
-export {
-    virtuaList
-}
+require('intersection-observer')
+import VirtuaList from "./components/virtuaList"
+export default VirtuaList
